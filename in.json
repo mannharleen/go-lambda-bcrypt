@@ -1,0 +1,4 @@
+{ 
+    "path" : "/bcrypt/hash",
+    "body" : "{\"password\": \"secret\"}"
+}
