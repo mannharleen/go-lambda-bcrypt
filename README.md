@@ -1,6 +1,10 @@
 # go lambda bcryptit
 
-An AWS lambda function that sits behind the API Gateway and performs the following
+An AWS lambda function that sits behind the API Gateway and performs the following:
+- Given a password, return its bcrypt hash
+- Given a password and a hash, verify that they are valid
+
+# Usage
 
 | Path | Expected input | Expected output | Description
 |---|---|---|---|
@@ -19,22 +23,6 @@ The API GW should be configured as follows:
 ```
 where ANY method is integrated with our Lambda via lambda proxy integration
 
-# Usage
-
-Input payload to lambda
-```json
-{
-  "password": "3ecaea38-6c06-48d7-95bd-e59946bc7678"
-}
-```
-
-Response body from lambda
-```json
-{
-  "result": "xxxxxxx"
-}
-
-```
 
 # Deployment to AWS
 
